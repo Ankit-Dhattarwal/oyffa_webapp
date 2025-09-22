@@ -1,124 +1,98 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 
-const Footer = () => {
+const Hero = () => {
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80;
+      const targetPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xs">O</span>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-white">
-                Oyffa<span className="text-teal-400 font-mono">+</span>
-              </h3>
-            </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Research-driven product company specializing in AI, automation, and custom software solutions. 
-              Founded by IIT alumni with a mission to democratize intelligent technology.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 text-blue-400" />
-                <span>hello@oyffa.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Phone className="h-4 w-4 text-blue-400" />
-                <span>+91 8607629309</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <MapPin className="h-4 w-4 text-blue-400" />
-                <span>Global Service</span>
-              </div>
-            </div>
-          </div>
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden pt-20">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-50 animate-pulse"></div>
+        <div className="absolute bottom-32 right-16 w-24 h-24 bg-purple-100 rounded-full opacity-40 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-64 right-32 w-16 h-16 bg-teal-100 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Services</h3>
-            <ul className="space-y-3">
-              {[
-                'Automation Solutions',
-                'AI & Data Science',
-                'Mobile Development',
-                'Web Development & SaaS',
-                'Quantum Computing',
-                'Low-Code Solutions'
-              ].map((service, index) => (
-                <li key={index}>
-                  <a
-                    href="#services"
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Company</h3>
-            <ul className="space-y-3">
-              {[
-                { label: 'About Us', href: '#about' },
-                { label: 'Contact', href: '#contact' },
-                { label: 'Our Expertise', href: '#services' },
-                { label: 'Careers', href: 'mailto:hello@oyffa.com' },
-                { label: 'Research', href: 'mailto:research@oyffa.com' }
-              ].map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Industries</h3>
-            <ul className="space-y-3">
-              {[
-                'Healthcare & Life Sciences',
-                'Financial Services',
-                'E-commerce & Retail',
-                'Manufacturing & Supply Chain',
-                'Education & EdTech',
-                'Startups & SMBs'
-              ].map((industry, index) => (
-                <li key={index}>
-                  <a
-                    href="#contact"
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-                  >
-                    {industry}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-500 text-sm">
-            &copy; 2024 Oyffa. All rights reserved. | Built with passion for innovation and intelligent automation | IIT Alumni Founded
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        {/* Main Heading */}
+        <div className="space-y-8 mb-12">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+            Transforming Ideas into{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Intelligent Solutions
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+            Research-driven product company specializing in Artificial Intelligence, Automation, 
+            and Custom Software Solutions. Powered by expert IIT alumni engineers delivering 
+            scalable, AI-first solutions for businesses worldwide.
           </p>
         </div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12 px-4">
+          {[
+            { icon: '🎓', text: 'IIT Alumni Founded' },
+            { icon: '🔬', text: 'Research-Focused' },
+            { icon: '🤖', text: 'AI-First Approach' },
+            { icon: '🌐', text: 'Global Delivery' }
+          ].map((tag, index) => (
+            <div
+              key={index}
+              className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              <span className="text-lg mr-2">{tag.icon}</span>
+              <span className="text-gray-700 font-medium text-sm md:text-base">{tag.text}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 px-4">
+          <button
+            onClick={() => handleScrollToSection('services')}
+            className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 min-w-[220px]"
+          >
+            Explore Our Services
+            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+          </button>
+          
+          <button
+            onClick={() => handleScrollToSection('contact')}
+            className="group bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-blue-600 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:bg-blue-600 hover:text-white flex items-center justify-center gap-3 min-w-[220px]"
+          >
+            <Star className="h-5 w-5 group-hover:rotate-12 transition-transform duration-200" />
+            Start Your Project
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4">
+          {[
+            { number: '50+', label: 'Projects Delivered' },
+            { number: '25+', label: 'Happy Clients' },
+            { number: '99%', label: 'Success Rate' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+              <div className="text-gray-600 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default Hero;

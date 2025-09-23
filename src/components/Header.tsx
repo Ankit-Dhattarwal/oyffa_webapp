@@ -33,7 +33,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4 cursor-pointer group">
             <img 
-              src="/WhatsApp Image 2025-09-22 at 23.05.33.jpeg" 
+              src="/WhatsApp_Image_2025-09-22_at_23.05.33-removebg-preview.png" 
               alt="Oyffa Technologies" 
               className="h-12 w-auto transform transition-all duration-300 group-hover:scale-105"
             />

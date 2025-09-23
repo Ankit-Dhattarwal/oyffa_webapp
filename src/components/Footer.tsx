@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/WhatsApp Image 2025-09-22 at 23.05.33.jpeg" 
+                src="/WhatsApp_Image_2025-09-22_at_23.05.33-removebg-preview.png" 
                 alt="Oyffa Technologies" 
                 className="h-10 w-auto"
               />

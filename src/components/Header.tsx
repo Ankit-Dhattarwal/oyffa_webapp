@@ -32,16 +32,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4 cursor-pointer group">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
-              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-sm">O</span>
-              </div>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">
-                Oyffa<span className="text-teal-500 font-mono">+</span>
-              </h1>
-            </div>
+            <img 
+              src="/WhatsApp Image 2025-09-22 at 23.05.33.jpeg" 
+              alt="Oyffa Technologies" 
+              className="h-12 w-auto transform transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}

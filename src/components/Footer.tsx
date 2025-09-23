@@ -10,14 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xs">O</span>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-white">
-                Oyffa<span className="text-teal-400 font-mono">+</span>
-              </h3>
+              <img 
+                src="/WhatsApp Image 2025-09-22 at 23.05.33.jpeg" 
+                alt="Oyffa Technologies" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Research-driven product company specializing in AI, automation, and custom software solutions. 

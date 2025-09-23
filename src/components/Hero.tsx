@@ -1,19 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star } from 'lucide-react';
 
 const Hero = () => {
-  const handleScrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 80;
-      const targetPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden pt-20">
       {/* Background Elements */}
@@ -60,21 +49,21 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 px-4">
-          <button
-            onClick={() => handleScrollToSection('services')}
+          <Link
+            to="/services"
             className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex items-center justify-center gap-3 min-w-[220px]"
           >
             Explore Our Services
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-          </button>
+          </Link>
           
-          <button
-            onClick={() => handleScrollToSection('contact')}
+          <Link
+            to="/contact"
             className="group bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-blue-600 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:bg-blue-600 hover:text-white flex items-center justify-center gap-3 min-w-[220px]"
           >
             <Star className="h-5 w-5 group-hover:rotate-12 transition-transform duration-200" />
             Start Your Project
-          </button>
+          </Link>
         </div>
 
         {/* Stats */}

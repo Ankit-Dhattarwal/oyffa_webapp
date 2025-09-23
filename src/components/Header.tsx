@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,17 +16,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) {
-      const headerHeight = 80;
-      const targetPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
+  const handleMobileMenuClose = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -39,7 +31,7 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-4 cursor-pointer group">
+          <Link to="/" className="flex items-center space-x-4 cursor-pointer group">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
               <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                 <span className="text-blue-600 font-bold text-sm">O</span>
@@ -50,25 +42,28 @@ const Header = () => {
                 Oyffa<span className="text-teal-500 font-mono">+</span>
               </h1>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center space-x-8 lg:space-x-12">
             {[
-              { href: 'hero', label: 'Home' },
-              { href: 'about', label: 'About' },
-              { href: 'services', label: 'Services' },
-              { href: 'contact', label: 'Contact' }
+              { href: '/', label: 'Home' },
+              { href: '/about-us', label: 'About' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact' }
             ].map((item) => (
               <li key={item.href}>
-                <a
-                  href={`#${item.href}`}
-                  onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group py-2"
+                <Link
+                  to={item.href}
+                  className={`text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group py-2 ${
+                    location.pathname === item.href ? 'text-blue-600' : ''
+                  }`}
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-                </a>
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300 ${
+                    location.pathname === item.href ? 'w-full' : 'w-0'
+                  }`}></span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -91,19 +86,21 @@ const Header = () => {
           <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-lg">
             <ul className="py-4 space-y-2">
               {[
-                { href: 'hero', label: 'Home' },
-                { href: 'about', label: 'About' },
-                { href: 'services', label: 'Services' },
-                { href: 'contact', label: 'Contact' }
+                { href: '/', label: 'Home' },
+                { href: '/about-us', label: 'About' },
+                { href: '/services', label: 'Services' },
+                { href: '/contact', label: 'Contact' }
               ].map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={`#${item.href}`}
-                    onClick={(e) => handleSmoothScroll(e, item.href)}
-                    className="block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200 font-medium"
+                  <Link
+                    to={item.href}
+                    onClick={handleMobileMenuClose}
+                    className={`block px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200 font-medium ${
+                      location.pathname === item.href ? 'text-blue-600 bg-blue-50' : ''
+                    }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

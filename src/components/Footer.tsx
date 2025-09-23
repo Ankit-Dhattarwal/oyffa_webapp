@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -67,19 +68,28 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-6">Company</h3>
             <ul className="space-y-3">
               {[
-                { label: 'About Us', href: '#about' },
-                { label: 'Contact', href: '#contact' },
-                { label: 'Our Expertise', href: '#services' },
+                { label: 'About Us', href: '/about-us' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Our Expertise', href: '/services' },
                 { label: 'Careers', href: 'mailto:hello@oyffa.com' },
                 { label: 'Research', href: 'mailto:research@oyffa.com' }
               ].map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-                  >
-                    {item.label}
-                  </a>
+                  {item.href.startsWith('mailto:') ? (
+                    <a
+                      href={item.href}
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -98,12 +108,12 @@ const Footer = () => {
                 'Startups & SMBs'
               ].map((industry, index) => (
                 <li key={index}>
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                   >
                     {industry}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

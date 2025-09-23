@@ -35,7 +35,7 @@ const Header = () => {
             <img 
               src="/WhatsApp_Image_2025-09-22_at_23.05.33-removebg-preview.png" 
               alt="Oyffa Technologies" 
-              className="h-12 w-auto transform transition-all duration-300 group-hover:scale-105"
+             className="h-16 w-auto transform transition-all duration-300 group-hover:scale-105"
             />
           </Link>
 

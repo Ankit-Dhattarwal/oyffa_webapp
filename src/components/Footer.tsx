@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/WhatsApp_Image_2025-09-22_at_23.05.33-removebg-preview.png" 
                 alt="Oyffa Technologies" 
-               className="h-14 w-auto"
+               className="h-18 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">

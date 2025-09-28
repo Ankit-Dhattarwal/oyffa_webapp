@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20">
+  <div>
     <Services />
   </div>
 </template>
@@ -7,12 +7,13 @@
 <script setup>
 // SEO for services page
 useHead({
-  title: 'Our Services - AI, Automation & Custom Software Development | Oyffa',
+  title: 'Our Services - Oyffa Technologies',
   meta: [
-    {
-      name: 'description',
-      content: 'Comprehensive technology services including AI & ML, automation solutions, mobile app development, web development, quantum computing research, and low-code solutions.'
-    }
+    { name: 'description', content: 'Explore our comprehensive technology services including web development, mobile apps, cloud solutions, and digital transformation.' },
+    { name: 'keywords', content: 'technology services, web development, mobile app development, cloud solutions, digital transformation, software consulting' },
+    { property: 'og:title', content: 'Our Services - Oyffa Technologies' },
+    { property: 'og:description', content: 'Comprehensive technology services for modern businesses' },
+    { property: 'og:url', content: 'https://oyffa.com/services' }
   ]
 })
 
@@ -20,19 +21,12 @@ useHead({
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'AI and Automation Services',
+  name: 'Technology Services',
   provider: {
     '@type': 'Organization',
     name: 'Oyffa Technologies'
   },
-  serviceType: [
-    'Artificial Intelligence',
-    'Automation Solutions',
-    'Mobile App Development',
-    'Web Development',
-    'Quantum Computing',
-    'Low-Code Solutions'
-  ],
-  description: 'Comprehensive technology solutions designed to accelerate digital transformation and drive business growth through intelligent automation.'
+  description: 'Comprehensive technology solutions including web development, mobile apps, and digital transformation',
+  url: 'https://oyffa.com/services'
 })
 </script>

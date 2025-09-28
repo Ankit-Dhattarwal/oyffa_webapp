@@ -1,7 +1,6 @@
 {
-  "name": "oyffa-nuxt-website",
+  "name": "oyffa-technologies",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -12,13 +11,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.12.1",
-    "nuxt": "^3.13.0",
-    "typescript": "^5.5.3"
+    "@nuxtjs/tailwindcss": "^6.8.4",
+    "nuxt": "^3.8.0"
   },
   "dependencies": {
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "@pinia/nuxt": "^0.5.5",
-    "pinia": "^2.2.4"
+    "@nuxtjs/google-fonts": "^3.0.2"
   }
 }

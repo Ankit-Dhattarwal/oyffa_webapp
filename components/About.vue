@@ -1,64 +1,70 @@
 <template>
-  <section id="about" class="py-20 lg:py-32 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16 lg:mb-24">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          About{' '}
-          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Oyffa
-          </span>
-        </h2>
-        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          Founded by IIT alumni with a mission to democratize artificial intelligence and 
-          automation through accessible, scalable solutions that transform business operations.
+  <section id="about" class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">About Oyffa Technologies</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We are a leading technology company dedicated to delivering innovative solutions that drive business growth and digital transformation.
         </p>
       </div>
-
-      <!-- About Cards Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-        <div
-          v-for="(card, index) in aboutCards"
-          :key="index"
-          class="group bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-        >
-          <!-- Icon -->
-          <div class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 lg:mb-8 group-hover:scale-110 transition-transform duration-300">
-            <Icon :name="card.icon" class="h-8 w-8 lg:h-10 lg:w-10 text-white" />
-          </div>
-
-          <!-- Content -->
-          <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
-            {{ card.title }}
-          </h3>
-          <p class="text-gray-600 leading-relaxed text-base lg:text-lg">
-            {{ card.description }}
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Mission</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            At Oyffa Technologies, we believe in the power of technology to transform businesses and improve lives. 
+            Our mission is to provide cutting-edge solutions that help our clients achieve their goals and stay ahead in the digital age.
           </p>
-
-          <!-- Hover Effect Line -->
-          <div class="w-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-500 mt-6 lg:mt-8 rounded-full"></div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center p-4 bg-primary-50 rounded-lg">
+              <div class="text-3xl font-bold text-primary-600 mb-2">50+</div>
+              <div class="text-gray-600">Projects Completed</div>
+            </div>
+            <div class="text-center p-4 bg-primary-50 rounded-lg">
+              <div class="text-3xl font-bold text-primary-600 mb-2">5+</div>
+              <div class="text-gray-600">Years Experience</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">Innovation First</h4>
+              <p class="text-gray-600">We stay at the forefront of technology trends to deliver innovative solutions.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">Expert Team</h4>
+              <p class="text-gray-600">Our skilled professionals bring years of experience and expertise to every project.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-2">Quality Assured</h4>
+              <p class="text-gray-600">We maintain the highest standards of quality in all our deliverables.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<script setup>
-const aboutCards = [
-  {
-    icon: 'heroicons:target',
-    title: 'Our Mission',
-    description: 'To democratize artificial intelligence and automation by creating accessible, scalable, and intelligent solutions that transform how businesses operate and innovate in the digital age.'
-  },
-  {
-    icon: 'heroicons:eye',
-    title: 'Our Vision',
-    description: 'To be the leading research-driven technology partner for businesses seeking to leverage AI, automation, and custom software solutions for sustainable growth and competitive advantage.'
-  },
-  {
-    icon: 'heroicons:cog-6-tooth',
-    title: 'Our Approach',
-    description: 'Research-first methodology with automation-centric design, delivering custom-focused solutions through quality-driven development and globally accessible services.'
-  }
-]
-</script>

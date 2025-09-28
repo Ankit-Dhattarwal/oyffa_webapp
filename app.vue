@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-// Global SEO configuration
+// Global SEO and meta configuration
 useHead({
   htmlAttrs: {
     lang: 'en'

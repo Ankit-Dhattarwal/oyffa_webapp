@@ -1,204 +1,133 @@
 <template>
-  <section id="contact" class="py-20 lg:py-32 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl opacity-20"></div>
-      <div class="absolute bottom-20 right-20 w-80 h-80 bg-white rounded-full blur-3xl opacity-15"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16 lg:mb-24">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Get In Touch
-        </h2>
-        <p class="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-          Ready to transform your business with cutting-edge technology? Let's discuss how we can 
-          help accelerate your digital transformation journey.
+  <section id="contact" class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Ready to start your next project? Contact us today and let's discuss how we can help transform your business with technology.
         </p>
       </div>
-
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-16">
+      
+      <div class="grid lg:grid-cols-2 gap-12">
         <!-- Contact Information -->
         <div class="space-y-8">
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-6 lg:gap-8">
-            <div
-              v-for="(item, index) in contactItems"
-              :key="index"
-              class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 lg:p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105"
-            >
-              <div class="flex items-center gap-4 mb-4">
-                <Icon :name="item.icon" class="h-6 w-6 text-blue-200" />
-                <h3 class="text-lg lg:text-xl font-bold">{{ item.title }}</h3>
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">Address</h4>
+                  <p class="text-gray-600">123 Technology Street<br>Innovation District<br>Tech City, TC 12345</p>
+                </div>
               </div>
-              <p class="text-blue-100 text-sm lg:text-base mb-3 leading-relaxed">
-                {{ item.description }}
-              </p>
-              <div class="text-white font-semibold text-sm lg:text-base">
-                {{ item.action }}
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">Phone</h4>
+                  <p class="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">Email</h4>
+                  <p class="text-gray-600">info@oyffa.com</p>
+                </div>
               </div>
             </div>
+          </div>
+          
+          <!-- Company Logo -->
+          <div class="pt-8">
+            <img 
+              src="https://i.imgur.com/YourLogoId.png" 
+              alt="Oyffa Technologies Logo" 
+              class="h-18 w-auto"
+            />
           </div>
         </div>
-
+        
         <!-- Contact Form -->
-        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-          <div class="text-center mb-8">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-4">Start Your Project</h3>
-            <div class="w-16 h-1 bg-white/50 rounded-full mx-auto"></div>
-          </div>
-
-          <form @submit.prevent="handleSubmit" class="space-y-6 lg:space-y-8">
-            <!-- Name and Email Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <form @submit.prevent="submitForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="block text-white font-medium mb-3">
-                  Full Name *
-                </label>
-                <input
-                  v-model="formData.name"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your full name"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
+                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  v-model="form.firstName"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
                   required
                 />
               </div>
               <div>
-                <label for="email" class="block text-white font-medium mb-3">
-                  Email Address *
-                </label>
-                <input
-                  v-model="formData.email"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
+                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  v-model="form.lastName"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
                   required
                 />
               </div>
             </div>
-
-            <!-- Company and Phone Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="company" class="block text-white font-medium mb-3">
-                  Company/Organization
-                </label>
-                <input
-                  v-model="formData.company"
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Your company name"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
-                />
-              </div>
-              <div>
-                <label for="phone" class="block text-white font-medium mb-3">
-                  Phone Number
-                </label>
-                <input
-                  v-model="formData.phone"
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+1 (555) 123-4567"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
-                />
-              </div>
-            </div>
-
-            <!-- Service and Budget Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="service" class="block text-white font-medium mb-3">
-                  Service Interest *
-                </label>
-                <select
-                  v-model="formData.service"
-                  id="service"
-                  name="service"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
-                  required
-                >
-                  <option value="" class="text-gray-800">Select a service</option>
-                  <option value="automation" class="text-gray-800">Automation Solutions</option>
-                  <option value="ai-ml" class="text-gray-800">AI & Data Science</option>
-                  <option value="mobile" class="text-gray-800">Mobile App Development</option>
-                  <option value="web" class="text-gray-800">Web Development & SaaS</option>
-                  <option value="quantum" class="text-gray-800">Quantum Computing Research</option>
-                  <option value="lowcode" class="text-gray-800">Low-Code/No-Code Solutions</option>
-                  <option value="consultation" class="text-gray-800">General Consultation</option>
-                </select>
-              </div>
-              <div>
-                <label for="budget" class="block text-white font-medium mb-3">
-                  Project Budget Range
-                </label>
-                <select
-                  v-model="formData.budget"
-                  id="budget"
-                  name="budget"
-                  class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
-                >
-                  <option value="" class="text-gray-800">Select budget range</option>
-                  <option value="5k-15k" class="text-gray-800">$5,000 - $15,000</option>
-                  <option value="15k-50k" class="text-gray-800">$15,000 - $50,000</option>
-                  <option value="50k-100k" class="text-gray-800">$50,000 - $100,000</option>
-                  <option value="100k+" class="text-gray-800">$100,000+</option>
-                  <option value="discuss" class="text-gray-800">Let's discuss</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Timeline -->
+            
             <div>
-              <label for="timeline" class="block text-white font-medium mb-3">
-                Project Timeline
-              </label>
-              <select
-                v-model="formData.timeline"
-                id="timeline"
-                name="timeline"
-                class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200"
-              >
-                <option value="" class="text-gray-800">Select timeline</option>
-                <option value="immediate" class="text-gray-800">Immediate (< 1 month)</option>
-                <option value="short" class="text-gray-800">Short-term (1-3 months)</option>
-                <option value="medium" class="text-gray-800">Medium-term (3-6 months)</option>
-                <option value="long" class="text-gray-800">Long-term (6+ months)</option>
-                <option value="ongoing" class="text-gray-800">Ongoing partnership</option>
-              </select>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                v-model="form.email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
+                required
+              />
             </div>
-
-            <!-- Message -->
+            
             <div>
-              <label for="message" class="block text-white font-medium mb-3">
-                Project Details *
-              </label>
-              <textarea
-                v-model="formData.message"
-                id="message"
-                name="message"
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                v-model="form.subject"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
+                required
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea 
+                id="message" 
+                v-model="form.message"
                 rows="5"
-                placeholder="Tell us about your project goals, technical requirements, and how we can help you succeed..."
-                class="w-full px-4 lg:px-6 py-3 lg:py-4 bg-white/10 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-200 resize-none"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 resize-none"
                 required
               ></textarea>
             </div>
-
-            <!-- Submit Button -->
-            <button
-              type="submit"
+            
+            <button 
+              type="submit" 
+              class="w-full btn-primary"
               :disabled="isSubmitting"
-              class="w-full bg-white text-blue-600 px-8 py-4 lg:py-5 rounded-lg font-bold text-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3"
             >
-              <div v-if="isSubmitting" class="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-              <Icon v-else name="heroicons:paper-airplane" class="h-5 w-5" />
-              {{ isSubmitting ? 'Sending...' : 'Send Project Inquiry' }}
+              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
             </button>
           </form>
         </div>
@@ -208,77 +137,34 @@
 </template>
 
 <script setup>
-const formData = reactive({
-  name: '',
+const form = ref({
+  firstName: '',
+  lastName: '',
   email: '',
-  company: '',
-  phone: '',
-  service: '',
-  budget: '',
-  timeline: '',
+  subject: '',
   message: ''
 })
 
 const isSubmitting = ref(false)
 
-const contactItems = [
-  {
-    icon: 'heroicons:envelope',
-    title: 'Business Inquiries',
-    description: 'Ready to transform your business with AI and automation? Let\'s discuss your project requirements and explore how Oyffa can help accelerate your digital transformation.',
-    action: 'hello@oyffa.com'
-  },
-  {
-    icon: 'heroicons:globe-alt',
-    title: 'Research Collaboration',
-    description: 'Interested in cutting-edge research in AI, quantum computing, or automation? We welcome academic partnerships and collaborative research opportunities.',
-    action: 'research@oyffa.com'
-  },
-  {
-    icon: 'heroicons:phone',
-    title: 'Enterprise Solutions',
-    description: 'Need scalable enterprise solutions? Our team specializes in large-scale implementations, system integrations, and custom development for Fortune 500 companies.',
-    action: '+91 8607629309'
-  },
-  {
-    icon: 'heroicons:map-pin',
-    title: 'Global Delivery',
-    description: 'Based in India with a global perspective. We serve clients worldwide, delivering remote-first solutions with 24/7 support and seamless communication.',
-    action: 'Worldwide Service'
-  }
-]
-
-const handleSubmit = async () => {
+const submitForm = async () => {
   isSubmitting.value = true
-
-  // Validate required fields
-  const requiredFields = ['name', 'email', 'service', 'message']
-  const missingFields = requiredFields.filter(field => !formData[field].trim())
-
-  if (missingFields.length > 0) {
-    alert(`Please fill in the following required fields: ${missingFields.join(', ')}`)
-    isSubmitting.value = false
-    return
-  }
-
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(formData.email)) {
-    alert('Please enter a valid email address.')
-    isSubmitting.value = false
-    return
-  }
-
+  
   // Simulate form submission
-  setTimeout(() => {
-    alert(`✅ Thank you ${formData.name}! Your inquiry has been received. Our team will contact you within 24 hours at ${formData.email}.`)
-    
-    // Reset form
-    Object.keys(formData).forEach(key => {
-      formData[key] = ''
-    })
-    
-    isSubmitting.value = false
-  }, 2000)
+  await new Promise(resolve => setTimeout(resolve, 1000))
+  
+  // Reset form
+  form.value = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  }
+  
+  isSubmitting.value = false
+  
+  // Show success message (you can implement a toast notification here)
+  alert('Thank you for your message! We will get back to you soon.')
 }
 </script>
